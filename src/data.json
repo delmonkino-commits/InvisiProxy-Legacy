@@ -41,8 +41,10 @@
   "delimiter": "*",
   "textMasks": {
 
-    "InvisiProxy": ["In*vi*s*i*P*r*o*x*y"],
-    "InvisiProxy LTS": ["In*vi*s*i*P*r*o*x*y L*T*S"],
+    "SuperProxy": ["S*u*p*e*r*P*r*o*x*y"],
+    "SuperProxy LTS": ["S*u*p*e*r*P*r*o*x*y L*T*S"],
+        "SuperDuperProxy": ["S*u*p*e*r*D*u*p*e*r*P*r*o*x*y"],
+    "SuperNiceProxy": ["S*u*p*e*r*N*i*c*e*P*r*o*x*y"],
     "Holy Unblocker": ["H*ol*y *Un*b*lo*c*k*er"],
     "Holy Unblocker LTS": ["H*ol*y *Un*b*lo*c*k*er *L*T*S"],
     "Webretro": ["W*e*b*r*e*t*r*o"],
@@ -84,11 +86,11 @@
     "Wisp": ["W*i*s*p"],
     "Tor": ["T*o*r"],
     "Onion": ["O*n*i*o*n"],
-    "Ultraviolet": ["Ul*t*ra*vi*o*le*t"],
-    "Scramjet": ["Sc*r*a*m*j*e*t"]
+    "SuperNiceProxy": ["S*u*p*e*r*N*i*c*e*P*r*o*x*y"],
+    "SuperDuperProxy": ["S*u*p*e*r*D*u*p*e*r*P*r*o*x*y"]
   },
   "splash": [
-    "{{mask}}{{This project has moved to https://github.com/InvisiProxy/InvisiProxyLTS. This version of InvisiProxy is no longer maintained. Please update your instance.}}"
+    "{{mask}}{{This project has moved to https://github.com/SuperProxy/SuperProxyLTS. This version of SuperProxy is no longer maintained. Please update your instance.}}"
   ],
   "version": ["7.1.0-legacy"]
 }

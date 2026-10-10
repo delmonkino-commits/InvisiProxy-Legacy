@@ -1,5 +1,5 @@
 {
-  "name": "InvisiProxy LTS",
+  "name": "SuperProxy LTS",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:26",
   "features": {
     "node": "26"

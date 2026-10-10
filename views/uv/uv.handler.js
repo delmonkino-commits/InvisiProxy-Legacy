@@ -2,13 +2,13 @@
 /* Authors: TitaniumNetwork
 /* GNU Affero General Public License v3.0: https://www.gnu.org/licenses/agpl-3.0.en.html
 /* Modified by Yoct to remove __uv$config.
-/* Ultraviolet Handler Script
+/* SuperNiceProxy Handler Script
 /* ----------------------------------------------- */
 
 /**
- * @type {import('../uv').UltravioletCtor}
+ * @type {import('../uv').SuperNiceProxyCtor}
  */
-const Ultraviolet = self.Ultraviolet;
+const SuperNiceProxy = self.SuperNiceProxy;
 
 /**
  * @type {import('../uv').UVClientCtor}
@@ -38,7 +38,7 @@ self.__uvHook = __uvHook;
  * @returns
  */
 function __uvHook(window) {
-  if ('__uv' in window && window.__uv instanceof Ultraviolet) return false;
+  if ('__uv' in window && window.__uv instanceof SuperNiceProxy) return false;
 
   if (window.document && !!window.window) {
     window.document
@@ -216,7 +216,7 @@ function __uvHook(window) {
     methodPrefix + 'modifiedStyle',
     methodPrefix + 'config',
     methodPrefix + 'dispatched',
-    'Ultraviolet',
+    'SuperNiceProxy',
     '__uvHook',
   ];
 
@@ -410,7 +410,7 @@ function __uvHook(window) {
 
   // IDB
   client.idb.on('idbFactoryOpen', (event) => {
-    // Don't modify the Ultraviolet cookie database
+    // Don't modify the SuperNiceProxy cookie database
     if (event.data.name === '__op') return;
     event.data.name = `${__uv.meta.url.origin}@${event.data.name}`;
   });

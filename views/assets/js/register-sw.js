@@ -49,7 +49,7 @@
     }
   };
 
-  const registerScramjetSW = async () => {
+  const registerSuperDuperProxySW = async () => {
     if (!navigator.serviceWorker) {
       if (
         location.protocol !== 'https:' &&
@@ -62,7 +62,7 @@
     await unregisterStaleSWs();
 
     const sw = swRoutes.sj[swVariant()];
-    console.log('Registering Scramjet service worker:', sw);
+    console.log('Registering SuperDuperProxy service worker:', sw);
     const registration = await navigator.serviceWorker.register(sw, {
       scope: swScope,
     });
@@ -89,7 +89,7 @@
     return registration;
   };
 
-  const buildScramjetTransport = async () => {
+  const buildSuperDuperProxyTransport = async () => {
     const { url, options } = getTransportSelection();
     const mod = await import(url);
     const TransportClient = mod.default;
@@ -124,8 +124,8 @@
 
   const initialize = async () => {
     try {
-      if (window.$invisiScramjet?.ready) {
-        const existing = window.$invisiScramjet;
+      if (window.$invisiSuperDuperProxy?.ready) {
+        const existing = window.$invisiSuperDuperProxy;
         const visibleFrame = document.getElementById('frame');
         if (
           visibleFrame instanceof HTMLIFrameElement &&
@@ -153,7 +153,7 @@
           await navigator.serviceWorker.register(swRoutes.uv[swVariant()], {
             scope: uvSwScope,
           });
-          console.log('Ultraviolet service worker registered');
+          console.log('SuperNiceProxy service worker registered');
         } catch (err) {
           console.warn(
             'BareMux setup failed',
@@ -161,16 +161,16 @@
           );
         }
 
-      const registration = await registerScramjetSW();
+      const registration = await registerSuperDuperProxySW();
 
       const serviceworker =
         navigator.serviceWorker.controller ?? registration.active;
       if (!serviceworker)
-        throw new Error('No service worker available for Scramjet controller');
+        throw new Error('No service worker available for SuperDuperProxy controller');
 
       const { Controller } = $scramjetController;
       const { defaultConfig } = $scramjet;
-      const transport = await buildScramjetTransport();
+      const transport = await buildSuperDuperProxyTransport();
       const controller = new Controller({
         serviceworker,
         transport,
@@ -197,14 +197,14 @@
             () =>
               reject(
                 new Error(
-                  'Scramjet controller handshake timed out'
+                  'SuperDuperProxy controller handshake timed out'
                 )
               ),
             15000
           )
         ),
       ]);
-      console.log('Scramjet controller initialized');
+      console.log('SuperDuperProxy controller initialized');
 
       const visibleFrame = document.getElementById('frame');
       let frame;
@@ -222,14 +222,14 @@
         frame = controller.createFrame(hidden);
       }
 
-      window.$invisiScramjet = { controller, frame, ready: true };
+      window.$invisiSuperDuperProxy = { controller, frame, ready: true };
       window.dispatchEvent(new Event('s-ready'));
     } catch (err) {
       console.error(
-        'Scramjet initialization failed',
+        'SuperDuperProxy initialization failed',
         err
       );
-      window.$invisiScramjetError = err;
+      window.$invisiSuperDuperProxyError = err;
       window.dispatchEvent(new CustomEvent('s-error', { detail: err }));
     }
   };

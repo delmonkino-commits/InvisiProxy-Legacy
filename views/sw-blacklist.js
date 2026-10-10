@@ -24,7 +24,7 @@ const isBlacklistedDomain = (domain) => {
   return false;
 };
 
-const targetHostnameForScramjet = (reqUrl) => {
+const targetHostnameForSuperDuperProxy = (reqUrl) => {
   try {
     const path = new URL(reqUrl).pathname;
     if (!path.startsWith(SJ_CONTROLLER_PREFIX)) return null;
@@ -42,7 +42,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     (async () => {
       if ($scramjetController.shouldRoute(event)) {
-        const hostname = targetHostnameForScramjet(event.request.url);
+        const hostname = targetHostnameForSuperDuperProxy(event.request.url);
         if (isBlacklistedDomain(hostname))
           return new Response(new Blob(), { status: 406 });
         return $scramjetController.route(event);

@@ -1,8 +1,8 @@
 {
-  "name": "InvisiProxy v7.1.0",
-  "description": "InvisiProxy is a secure web proxy service supporting numerous sites while concentrating on detail with design, mechanics, and features. Bypass web filters regardless of whether it is an extension or network-based.",
-  "repository": "https://github.com/QuiteAFancyEmerald/InvisiProxy-Legacy",
-  "logo": "https://raw.githubusercontent.com/QuiteAFancyEmerald/InvisiProxy-Legacy/master/views/assets/img/icon.png",
+  "name": "SuperProxy v7.1.0",
+  "description": "SuperProxy is a secure web proxy service supporting numerous sites while concentrating on detail with design, mechanics, and features. Bypass web filters regardless of whether it is an extension or network-based.",
+  "repository": "https://github.com/QuiteAFancyEmerald/SuperProxy-Legacy",
+  "logo": "https://raw.githubusercontent.com/QuiteAFancyEmerald/SuperProxy-Legacy/master/views/assets/img/icon.png",
   "keywords": [
     "invisiproxy",
     "holyunblocker",

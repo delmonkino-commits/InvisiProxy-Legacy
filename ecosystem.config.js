@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'InvisiProxyLTS',
+      name: 'SuperProxyLTS',
       script: './backend.js',
       env: {
         PORT: 8080,
@@ -21,7 +21,7 @@ module.exports = {
       watch: false,
     },
     {
-      name: 'InvisiProxyLTS-src-refresh',
+      name: 'SuperProxyLTS-src-refresh',
       script: './run-command.mjs',
       args: 'build',
       env: {
@@ -39,7 +39,7 @@ module.exports = {
       watch: false,
     },
     {
-      name: 'InvisiProxyLTS-cache-clean',
+      name: 'SuperProxyLTS-cache-clean',
       script: './run-command.mjs',
       args: 'clean',
       env: {

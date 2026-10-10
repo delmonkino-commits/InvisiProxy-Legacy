@@ -2,7 +2,7 @@
 /* Authors: TitaniumNetwork
 /* GNU Affero General Public License v3.0: https://www.gnu.org/licenses/agpl-3.0.en.html
 /* Modified by Yoct to remove __uv$config and serve custom error pages.
-/* Ultraviolet Service Worker Script (v3.2.7)
+/* SuperNiceProxy Service Worker Script (v3.2.7)
 /* ----------------------------------------------- */
 
 /*globals __uv$config*/
@@ -10,9 +10,9 @@
 // This is to allow us to produce a generic bundle with no hard-coded paths.
 
 /**
- * @type {import('../uv').UltravioletCtor}
+ * @type {import('../uv').SuperNiceProxyCtor}
  */
-const Ultraviolet = self.Ultraviolet;
+const SuperNiceProxy = self.SuperNiceProxy;
 
 const cspHeaders = [
   'cross-origin-embedder-policy',
@@ -34,13 +34,13 @@ const cspHeaders = [
 ];
 const emptyMethods = ['GET', 'HEAD'];
 
-class UVServiceWorker extends Ultraviolet.EventEmitter {
+class UVServiceWorker extends SuperNiceProxy.EventEmitter {
   constructor(config = self['{{__uv$config}}']) {
     super();
     if (!config.prefix) config.prefix = '/service/';
     this.config = config;
     /**
-     * @type {InstanceType<Ultraviolet['BareClient']>}
+     * @type {InstanceType<SuperNiceProxy['BareClient']>}
      */
     this.bareClient = new Ultraviolet.BareClient();
   }
@@ -310,7 +310,7 @@ class UVServiceWorker extends Ultraviolet.EventEmitter {
       return renderError(err, fetchedURL);
     }
   }
-  static Ultraviolet = Ultraviolet;
+  static SuperNiceProxy = SuperNiceProxy;
 }
 
 self.UVServiceWorker = UVServiceWorker;
@@ -363,7 +363,7 @@ class RequestContext {
   /**
    *
    * @param {Request} request
-   * @param {Ultraviolet} ultraviolet
+   * @param {SuperNiceProxy} ultraviolet
    * @param {BodyInit} body
    */
   constructor(request, ultraviolet, body = null) {

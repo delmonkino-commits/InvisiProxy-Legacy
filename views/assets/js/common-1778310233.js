@@ -1,7 +1,7 @@
 /* -----------------------------------------------
 /* Authors: QuiteAFancyEmerald, Yoct, b4kt, and OlyB
 /* GNU Affero General Public License v3.0: https://www.gnu.org/licenses/agpl-3.0.en.html
-/* MAIN InvisiProxy LTS Common Script
+/* MAIN SuperProxy LTS Common Script
 /* ----------------------------------------------- */
 
 // Encase everything in a new scope so that variables are not accidentally
@@ -314,12 +314,12 @@ const getSearchTemplate = (
     // Treat the input as a search query instead of a website.
     return getSearchTemplate().replace('%s', encodeURIComponent(input));
   },
-  // Parse a URL to use with Ultraviolet.
+  // Parse a URL to use with SuperNiceProxy.
   uvUrl = (url) => {
     try {
       url = location.origin + uvConfig.prefix + uvConfig.encodeUrl(search(url));
     } catch (e) {
-      // This is for cases where the Ultraviolet scripts have not been loaded.
+      // This is for cases where the SuperNiceProxy scripts have not been loaded.
       url = search(url);
     }
     return url;
@@ -355,12 +355,12 @@ const preparePage = async () => {
   // This won't break the service workers as they store the variable separately.
   uvConfig = self['{{__uv$config}}'];
 
-  if (window.$invisiScramjet?.ready) sjBundle = window.$invisiScramjet;
+  if (window.$invisiSuperDuperProxy?.ready) sjBundle = window.$invisiSuperDuperProxy;
   else
     window.addEventListener(
       's-ready',
       () => {
-        sjBundle = window.$invisiScramjet;
+        sjBundle = window.$invisiSuperDuperProxy;
       },
       { once: true }
     );
@@ -467,7 +467,7 @@ const preparePage = async () => {
         : (mode) => () => {
             goProx[type](mode);
           },
-      // Ultraviolet and Scramjet are currently incompatible with window mode.
+      // SuperNiceProxy and SuperDuperProxy are currently incompatible with window mode.
       defaultModes = {
         globalDefault: 'window',
         ultraviolet: 'stealth',

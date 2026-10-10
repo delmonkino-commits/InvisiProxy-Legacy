@@ -1,26 +1,26 @@
-<img align="center" src="https://raw.githubusercontent.com/QuiteAFancyEmerald/InvisiProxy/master/views/assets/img/github_banner.png"></img>
+<img align="center" src="https://raw.githubusercontent.com/QuiteAFancyEmerald/SuperProxy/master/views/assets/img/github_banner.png"></img>
 
-<img align="left" width="40px" src="https://raw.githubusercontent.com/QuiteAFancyEmerald/InvisiProxy/master/views/assets/img/logo_github.png"></img>
+<img align="left" width="40px" src="https://raw.githubusercontent.com/QuiteAFancyEmerald/SuperProxy/master/views/assets/img/logo_github.png"></img>
 
-# InvisiProxy LTS (Legacy v7.x.x)
+# SuperProxy LTS (Legacy v7.x.x)
 ## This repository and project has moved
-## Please use https://github.com/InvisiProxy/InvisiProxyLTS instead !!!
-## Please use https://github.com/InvisiProxy/InvisiProxyLTS instead !!!
-## Please use https://github.com/InvisiProxy/InvisiProxyLTS instead !!!
-#### This is the last version of InvisiProxy to support Ultraviolet. Ultraviolet is now fully replaced by Scramjet as it has better site support and security measures.
+## Please use https://github.com/SuperProxy/SuperProxyLTS instead !!!
+## Please use https://github.com/SuperProxy/SuperProxyLTS instead !!!
+## Please use https://github.com/SuperProxy/SuperProxyLTS instead !!!
+#### This is the last version of SuperProxy to support SuperNiceProxy. SuperNiceProxy is now fully replaced by SuperDuperProxy as it has better site support and security measures.
 #### Formerly Holy Unblocker LTS
 
-![GitHub Actions Status](https://github.com/QuiteAFancyEmerald/InvisiProxy/workflows/CI-Production/badge.svg)
-![GitHub Actions Status](https://github.com/QuiteAFancyEmerald/InvisiProxy/workflows/CI-Win/badge.svg)
-[![Docker Image Version](https://img.shields.io/docker/v/quiteafancyemerald/invisiproxy.svg)](https://hub.docker.com/r/quiteafancyemerald/InvisiProxy)
-[![Docker Pulls](https://img.shields.io/docker/pulls/quiteafancyemerald/invisiproxy.svg)](https://hub.docker.com/r/quiteafancyemerald/InvisiProxy)
+![GitHub Actions Status](https://github.com/QuiteAFancyEmerald/SuperProxy/workflows/CI-Production/badge.svg)
+![GitHub Actions Status](https://github.com/QuiteAFancyEmerald/SuperProxy/workflows/CI-Win/badge.svg)
+[![Docker Image Version](https://img.shields.io/docker/v/quiteafancyemerald/invisiproxy.svg)](https://hub.docker.com/r/quiteafancyemerald/SuperProxy)
+[![Docker Pulls](https://img.shields.io/docker/pulls/quiteafancyemerald/invisiproxy.svg)](https://hub.docker.com/r/quiteafancyemerald/SuperProxy)
 [![Docker Pulls](https://img.shields.io/docker/pulls/quiteafancyemerald/holy-unblocker.svg)](https://hub.docker.com/r/quiteafancyemerald/holy-unblocker)
 
-**InvisiProxy LTS** (formerly Holy Unblocker LTS) is an experimental web proxy service that can bypass web filters or "blockers" regardless of whether the method of censorship is client-side or network-based. This includes the ability to bypass content blockers from governments, chrome extensions, localized client firewalls, and network-related filters. The project even allows the ability to browse Tor/Onion sites in any browser (even Chromium) all through a website!
+**SuperProxy LTS** (formerly Holy Unblocker LTS) is an experimental web proxy service that can bypass web filters or "blockers" regardless of whether the method of censorship is client-side or network-based. This includes the ability to bypass content blockers from governments, chrome extensions, localized client firewalls, and network-related filters. The project even allows the ability to browse Tor/Onion sites in any browser (even Chromium) all through a website!
 
-## You can support InvisiProxy by starring the repository!
+## You can support SuperProxy by starring the repository!
 
-This project serves mostly as a proof of concept for the ideal clientless solution to bypassing censorship. A good use case of this project would be if you ever needed a method to use Tor, swap regions when browsing (or use an external proxy), browse websites without making accounts (reduces fingerprinting), bypass adblocking, and/or leave minimal traces of device activity. Simply host this project on any domain and have an alternative solution to a VPN without needing to download anything on said device. Being a secure web proxy service, it supports numerous sites while being updated frequently and concentrating on being easy to self-host. InvisiProxy LTS works with a large number of sites, including YouTube, Gemini, ChatGPT, Discord, GeForce NOW and more! This project also features good amount of exclusive features compared to other web proxies in terms of bypassing web filters (DOM Masquerading and Source Randomization) and global censorship from countries. Current countries supported are China (GFW) and Russia.
+This project serves mostly as a proof of concept for the ideal clientless solution to bypassing censorship. A good use case of this project would be if you ever needed a method to use Tor, swap regions when browsing (or use an external proxy), browse websites without making accounts (reduces fingerprinting), bypass adblocking, and/or leave minimal traces of device activity. Simply host this project on any domain and have an alternative solution to a VPN without needing to download anything on said device. Being a secure web proxy service, it supports numerous sites while being updated frequently and concentrating on being easy to self-host. SuperProxy LTS works with a large number of sites, including YouTube, Gemini, ChatGPT, Discord, GeForce NOW and more! This project also features good amount of exclusive features compared to other web proxies in terms of bypassing web filters (DOM Masquerading and Source Randomization) and global censorship from countries. Current countries supported are China (GFW) and Russia.
 
 #### Over 35M+ users since 2020. Thank you so much for the support I could have never imagined how massive the web proxy community has become.
 
@@ -30,25 +30,25 @@ This project serves mostly as a proof of concept for the ideal clientless soluti
 
 - Latest (master; built for FOSS and SEO)
 - Beta (pending changes; changes that may break things)
-- Production (v4, v5, v6; stable version of InvisiProxy LTS. Changes for self hosting in production settings; max filtering evasion and request handling)
+- Production (v4, v5, v6; stable version of SuperProxy LTS. Changes for self hosting in production settings; max filtering evasion and request handling)
 </details>
 
 #### Considering switching branches for self-hosting to a production branch!
 
-View the <a href="#deploy-InvisiProxy">self-deployment options</a> if you wish to self host this project. Can't deploy using any of the free options? Check out Koyeb or look into cheap, paid VPS hosting solutions. If you don't wish to self-host join the discord for more official instance links that are restocked frequently.
+View the <a href="#deploy-SuperProxy">self-deployment options</a> if you wish to self host this project. Can't deploy using any of the free options? Check out Koyeb or look into cheap, paid VPS hosting solutions. If you don't wish to self-host join the discord for more official instance links that are restocked frequently.
 
 **Be sure to join TitaniumNetwork's Discord for more official site links:** <a href="https://discord.gg/unblock">https://discord.gg/unblock</a>
 
 ## This repository and project has moved
-## Please use https://github.com/InvisiProxy/InvisiProxyLTS instead !!!
+## Please use https://github.com/SuperProxy/SuperProxyLTS instead !!!
 
 <br>
 
 > [!CAUTION]
-> If you are going to self-host InvisiProxy LTS please switch to the PRODUCTION branch for filter evasion features enabled automatically. The master branch will feature work-in-progress changes that are not ready for self hosting. If you wish to contribute to this project however please PR to the master branch.
+> If you are going to self-host SuperProxy LTS please switch to the PRODUCTION branch for filter evasion features enabled automatically. The master branch will feature work-in-progress changes that are not ready for self hosting. If you wish to contribute to this project however please PR to the master branch.
 
 > [!TIP]
-> InvisiProxy LTS is optimized for self-hosting to provide you with maximum privacy control! Fork this repository and consider starring. You can self-host using either free or paid deployment options, or set it up on a dedicated instance (VPS) for enhanced performance.
+> SuperProxy LTS is optimized for self-hosting to provide you with maximum privacy control! Fork this repository and consider starring. You can self-host using either free or paid deployment options, or set it up on a dedicated instance (VPS) for enhanced performance.
 
 | **Supported Sites**        | **Features**                                                                                                                          |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -62,29 +62,29 @@ View the <a href="#deploy-InvisiProxy">self-deployment options</a> if you wish t
 | Spotify                    | Bypass regional proxy blocks by swapping regions or enabling Tor                                                                      |
 | And essentially most sites!| Built for intensive production loads and ease of setup                                                                               |
 
-<img src="https://raw.githubusercontent.com/QuiteAFancyEmerald/InvisiProxy/master/views/assets/img/preview/invisi-v7.0.2-preview.png"> </img>
-<img src="https://raw.githubusercontent.com/QuiteAFancyEmerald/InvisiProxy/master/views/assets/img/preview/invisi-v6.9.7-preview-settings.png"></img>
+<img src="https://raw.githubusercontent.com/QuiteAFancyEmerald/SuperProxy/master/views/assets/img/preview/invisi-v7.0.2-preview.png"> </img>
+<img src="https://raw.githubusercontent.com/QuiteAFancyEmerald/SuperProxy/master/views/assets/img/preview/invisi-v6.9.7-preview-settings.png"></img>
 
-## Deploy InvisiProxy
+## Deploy SuperProxy
 
 ### Free Deployments
 
-[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?name=InvisiProxy&type=git&repository=QuiteAFancyEmerald%2FInvisiProxy&branch=production&builder=dockerfile&ports=8080%3Bhttp%3B%2F)
+[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?name=SuperProxy&type=git&repository=QuiteAFancyEmerald%2FSuperProxy&branch=production&builder=dockerfile&ports=8080%3Bhttp%3B%2F)
 [![Deploy to Oracle Cloud](https://binbashbanana.github.io/deploy-buttons/buttons/remade/oraclecloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/BinBashBanana/deploy-buttons/archive/refs/heads/main.zip)
 
 <details><summary>Alternative Free Sources</summary>
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/QuiteAFancyEmerald/InvisiProxy)
-[![Deploy to Fly.io](https://img.shields.io/badge/Deploy%20to-Fly.io-blue?logo=fly.io)](https://fly.io/launch?repo=https://github.com/QuiteAFancyEmerald/InvisiProxy)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/QuiteAFancyEmerald/SuperProxy)
+[![Deploy to Fly.io](https://img.shields.io/badge/Deploy%20to-Fly.io-blue?logo=fly.io)](https://fly.io/launch?repo=https://github.com/QuiteAFancyEmerald/SuperProxy)
 
 </details>
 
 ### Production Paid/Free Options (Requires Payment Info)
 
-[![Deploy to Azure](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/azure.svg)](https://deploy.azure.com/?repository=https://github.com/QuiteAFancyEmerald/InvisiProxy)
-[![Deploy to IBM Cloud](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/ibmcloud.svg)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/QuiteAFancyEmerald/InvisiProxy)
-[![Deploy to Amplify Console](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/amplifyconsole.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/QuiteAFancyEmerald/InvisiProxy)
-[![Run on Google Cloud](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/googlecloud.svg)](https://deploy.cloud.run/?git_repo=https://github.com/QuiteAFancyEmerald/InvisiProxy)
+[![Deploy to Azure](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/azure.svg)](https://deploy.azure.com/?repository=https://github.com/QuiteAFancyEmerald/SuperProxy)
+[![Deploy to IBM Cloud](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/ibmcloud.svg)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/QuiteAFancyEmerald/SuperProxy)
+[![Deploy to Amplify Console](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/amplifyconsole.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/QuiteAFancyEmerald/SuperProxy)
+[![Run on Google Cloud](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/googlecloud.svg)](https://deploy.cloud.run/?git_repo=https://github.com/QuiteAFancyEmerald/SuperProxy)
 
 #### What happened to Replit/Heroku Deployment?
 
@@ -96,8 +96,8 @@ Replit is no longer free and Heroku has a set policy against web proxies. Try Gi
 
 - Fork (and star!) this repository to your GitHub account
 - Head to the official <a href="https://github.com/codespaces">Codespaces</a> website (ensure you have a GitHub account already made)
-- Select **New Codespaces** and look for `[USERNAME]/InvisiProxy` on your account
-- Ensure the branch is set to `master` and the dev container configuration is set to **InvisiProxy LTS**
+- Select **New Codespaces** and look for `[USERNAME]/SuperProxy` on your account
+- Ensure the branch is set to `master` and the dev container configuration is set to **SuperProxy LTS**
 - Select **Create Codespace** and allow the container to setup
 - Type `pnpm run fresh-install` and `pnpm start` in the terminal
 - Click "Make public" on the application popup, then access the deployed website via the ports tab.
@@ -145,9 +145,9 @@ Either use the button above to deploy to the deployment options above or type th
 Please ensure you are using `Node 20.x` as well. `git` and `curl` are required dependencies:
 
 ```bash
-git clone https://github.com/QuiteAFancyEmerald/InvisiProxy.git
+git clone https://github.com/QuiteAFancyEmerald/SuperProxy.git
 
-cd InvisiProxy
+cd SuperProxy
 
 # Edit config.js and set production to true if you want to use pm2 (Allows for easier VPS hosting)
 pnpm run fresh-install
@@ -167,7 +167,7 @@ pnpm run build
 pnpm run test
 ```
 
-This website is hosted locally with [Scramjet](https://github.com/MercuryWorkshop/Scramjet), [Ultraviolet](https://github.com/TitaniumNetwork-Dev/Ultraviolet), [Wisp](https://github.com/MercuryWorkshop/Wisp-Protocol), [Bare-Mux](https://github.com/MercuryWorkshop/Bare-Mux), [EpoxyTransport](https://github.com/MercuryWorkshop/Epoxy-Transport), and [LibcurlTransport](https://github.com/MercuryWorkshop/Libcurl-Transport) built-in.
+This website is hosted locally with [SuperDuperProxy](https://github.com/MercuryWorkshop/SuperDuperProxy), [SuperNiceProxy](https://github.com/TitaniumNetwork-Dev/SuperNiceProxy), [Wisp](https://github.com/MercuryWorkshop/Wisp-Protocol), [Bare-Mux](https://github.com/MercuryWorkshop/Bare-Mux), [EpoxyTransport](https://github.com/MercuryWorkshop/Epoxy-Transport), and [LibcurlTransport](https://github.com/MercuryWorkshop/Libcurl-Transport) built-in.
 
 ### For security reasons when hosting with a reverse proxy PLEASE use NGINX not Caddy. This is due to wispurr using loopbacks. If using Caddy disable this feature or adjust your default Caddy config.
 
@@ -182,7 +182,7 @@ For simplicity sake you can join the TN discord at discord.gg/unblock and reques
 If you wish to self-host however you will first need a VPS or hosting provider: 
 
 - https://docs.titaniumnetwork.org/guides/vps-hosting/
-- https://github.com/QuiteAFancyEmerald/InvisiProxy#deploy-InvisiProxy
+- https://github.com/QuiteAFancyEmerald/SuperProxy#deploy-SuperProxy
 - https://docs.titaniumnetwork.org/guides/dns-setup/
 
 ### Dependencies
@@ -206,20 +206,20 @@ https://github.com/nvm-sh/nvm
 https://docs.titaniumnetwork.org/guides/nginx/
 
 ### Tor Support (Optional)
-https://github.com/QuiteAFancyEmerald/InvisiProxy#toronionsocks5-routing-setup
+https://github.com/QuiteAFancyEmerald/SuperProxy#toronionsocks5-routing-setup
 
-### Configurating InvisiProxy
+### Configurating SuperProxy
 Most important options are production along with the obfuscation and DOM masquerading techniques. 
 
-From there just configure as needed: https://github.com/QuiteAFancyEmerald/InvisiProxy#configuration
+From there just configure as needed: https://github.com/QuiteAFancyEmerald/SuperProxy#configuration
 
-### Cloning and Running InvisiProxy
+### Cloning and Running SuperProxy
 
 Then run the respective process; if you have production set to true in the configuration pm2 will be automatically enabled with our own workers/cache system. 
 
 ```
-git clone https://github.com/QuiteAFancyEmerald/InvisiProxy.git
-cd InvisiProxy
+git clone https://github.com/QuiteAFancyEmerald/SuperProxy.git
+cd SuperProxy
 
 pnpm run fresh-start
 ```
@@ -250,10 +250,10 @@ Every other localized changes for source randomization, auto-minify, etc. are lo
 
 **config.json**
 - `minifyScripts`: Automatically minify respective static assets upon starting the server.
-- `randomizeIdentifiers`: Enable experimental proxy global randomization for Ultraviolet. This reduces the chances of UV being detected by any extension based filters.
+- `randomizeIdentifiers`: Enable experimental proxy global randomization for SuperNiceProxy. This reduces the chances of UV being detected by any extension based filters.
 - `production`: Utilize a pre-configured production setup for server hosting. Automatically has cache control and source rewrites setup.
 - `disguiseFiles`: Enable DOM masquerading which obfuscates real the real content fetches for InvisiLTS. This is done through disguising requests, decompressing and then reconstructing the DOM tree.
-- `usingSEO`: Enable Source Randomization which randomizes the source by swapping chunks of data specified in `./src/data.json`. Highly useful for masking keywords that will automatically flag or block InvisiProxy LTS as well as preventing source blocks.
+- `usingSEO`: Enable Source Randomization which randomizes the source by swapping chunks of data specified in `./src/data.json`. Highly useful for masking keywords that will automatically flag or block SuperProxy LTS as well as preventing source blocks.
 - `verbose`: Enables compiling and building messages to see progress and possible issues while compiling.
 #### Tor/Onion/SOCKS5 Routing Setup
 
@@ -263,9 +263,9 @@ Simply host Tor using this guide: https://tb-manual.torproject.org/installation/
 
 Alternative Guide (for CLI): https://community.torproject.org/onion-services/setup/install/
 
-If you are hosting InvisiProxy LTS on a VPS utilizing Ubuntu consider attaching Tor to systemctl for easier production management. Once Tor is up and running on either Linux or Windows it will work automatically with InvisiProxy LTS when enabled by the user via the Settings menu.
+If you are hosting SuperProxy LTS on a VPS utilizing Ubuntu consider attaching Tor to systemctl for easier production management. Once Tor is up and running on either Linux or Windows it will work automatically with SuperProxy LTS when enabled by the user via the Settings menu.
 
-If you wish to use a custom HTTP/HTTPS/SOCKS5 proxy to route all traffic through for Scramjet and Ultraviolet this is handled in `./views/assets/js/register-sw.js.` Modify `proxyUrl` with the respective protocol and address. This is done via the proxy option for Wisp. You can change the cases as needed.
+If you wish to use a custom HTTP/HTTPS/SOCKS5 proxy to route all traffic through for SuperDuperProxy and SuperNiceProxy this is handled in `./views/assets/js/register-sw.js.` Modify `proxyUrl` with the respective protocol and address. This is done via the proxy option for Wisp. You can change the cases as needed.
 
 ```js
   proxyUrl = {
@@ -279,20 +279,20 @@ If you wish to use a custom HTTP/HTTPS/SOCKS5 proxy to route all traffic through
 
 The primary location for tweaking any web proxy related settings assigned via the Settings menu is `./views/assets/js/register-sw.js`. Here you can modify the provided transport options set locally via a cookie, swap out SOCKS5 proxies, change Onion routing ports, specify a blacklist, and more.
 
-- `stockSW`: The default service worker configuration file for Ultraviolet. For InvisiProxy however adblocking is automatically enabled so this is not used by default.
-- `blacklistSW`: A modified version of Ultraviolet that allows for blacklisting domains and adblocking.
+- `stockSW`: The default service worker configuration file for SuperNiceProxy. For SuperProxy however adblocking is automatically enabled so this is not used by default.
+- `blacklistSW`: A modified version of SuperNiceProxy that allows for blacklisting domains and adblocking.
 - `proxyUrl`: Specifies a SOCKS5/HTTPS/HTTP protocol URL defaulting to the default Tor proxy port. This can be swapped out with any valid port or SOCK5s proxy. This is done via the proxy option for both epoxy and libcurl.
 - `transports`: Specifies any provided ports to be swapped via Bare-Mux and utilize Wisp.
 - `wispUrl`: Modify the pathname or url handling for Wisp
 - `defaultMode`: Specify the default transport used globally (can be swapped by the users still via the Settings menu)
-- `ScramjetController`: This constructor allows you to swap out the prefix used for Scramjet dynamically and specify file locations. Note you may need to edit `./views/scram/scramjet.sw` when changing file names.
+- `SuperDuperProxyController`: This constructor allows you to swap out the prefix used for SuperDuperProxy dynamically and specify file locations. Note you may need to edit `./views/scram/scramjet.sw` when changing file names.
 
 #### Client Navigation Configuration
 
 The primary location for any client side navigation scripts is `./views/assets/js/common.js`. This file is primary used for Omnibox (Search Engine) functionality, swapping proxy options and other client settings.
 
 - `getDomain`: This constant is used for specifying any subdomains to remove when appending a URL into the omnibox.
-- `goFrame`: This specifies the stealth frame used for InvisiProxy LTS
+- `goFrame`: This specifies the stealth frame used for SuperProxy LTS
 - `sx`: This constant specifies the search engine you want to be proxied whenever a user types something in that isn't a URL
 - `search/uvUrl/sjUrl`: These functions specify and parse the queries used for submitted URLs
 - `urlHandler/asyncUrlHandler`: Used to set functions for the goProx object.
@@ -333,7 +333,7 @@ prSet('pr-example', 'example');
 
 ### Structure Information
 
-- `/views/`: The physical site base of InvisiProxy goes here where static assets are served.
+- `/views/`: The physical site base of SuperProxy goes here where static assets are served.
 - `/src/`: For future implementation of obfuscation and keyword removing features.
 
 #### Details of `/views/`
@@ -341,7 +341,7 @@ prSet('pr-example', 'example');
 - `/dist/` is used for minfied files. Created on build.
 - `/pages/` is used for the HTML for the site.
 - `/assets/` is used for storing various CSS, JS, image, and JSON files.
-- `/scram/` contains the respective local Scramjet implementation. Some files are overridden by the node module.
+- `/scram/` contains the respective local SuperDuperProxy implementation. Some files are overridden by the node module.
 - `/uv/` contains the UV implementation.
 
 #### Scripts located in `/views/assets/js/`
@@ -350,13 +350,13 @@ prSet('pr-example', 'example');
 - `common.js` is used on all pages and allows most site features to function such as autocomplete.
 - `csel.js` manages the settings menu, omnibox function and other additional features.
 - `loader.js` is used as an asset for DOM masquerading.
-- `register-sw.js` creates and manages service workers that allow Ultraviolet to function, and also uses bare transport.
+- `register-sw.js` creates and manages service workers that allow SuperNiceProxy to function, and also uses bare transport.
 
 </details>
 
 ## Future Additions
 
-<a href="https://github.com/QuiteAFancyEmerald/InvisiProxy/blob/master/TODO.md">This</a> is our nonexhaustive todo list for InvisiProxy LTS v6.x.x and above. Release for production will be v7.x.x and above.
+<a href="https://github.com/QuiteAFancyEmerald/SuperProxy/blob/master/TODO.md">This</a> is our nonexhaustive todo list for SuperProxy LTS v6.x.x and above. Release for production will be v7.x.x and above.
 
 ## Vague Explanation for Beginners With External Proxies and Hosting
 
@@ -374,12 +374,12 @@ Out of the list of hosting providers Dedipath and Azure rank first as a preferen
 After you have selected a decent VPS, use Cloudflare for the DNS records for both the site and the subdomains for the proxies.
 
 This is an example of DNS records. Self-hosting will require `A records` preferably.
-<img src="https://raw.githubusercontent.com/titaniumnetwork-dev/InvisiProxy/master/views/assets/img/dnssetup.png" width="500"></img>
+<img src="https://raw.githubusercontent.com/titaniumnetwork-dev/SuperProxy/master/views/assets/img/dnssetup.png" width="500"></img>
 
-- `@` and `www.example.com` are being used for InvisiProxy LTS.
+- `@` and `www.example.com` are being used for SuperProxy LTS.
 - `a.example.com` is being used for other instances like Libreddit or Invidious depending on what the site maintainer needs.
 
-As stated previously, InvisiProxy is hosted locally with Scramjet and Ultraviolet out of the box. No need for external instances.
+As stated previously, SuperProxy is hosted locally with SuperDuperProxy and SuperNiceProxy out of the box. No need for external instances.
 
 #### Domain Steps
 
@@ -406,9 +406,9 @@ Preferably if you have your own device use Visual Studio Code. Pretty much the b
 Not going to go too in depth with this part but first fork this repository. The clone it locally through a Terminal of some sort depending on what OS you are on. Make sure you navigate to the folder you want to set this up in.
 
 ```
-git clone https://github.com/QuiteAFancyEmerald/InvisiProxy.git
+git clone https://github.com/QuiteAFancyEmerald/SuperProxy.git
 
-cd InvisiProxy
+cd SuperProxy
 
 pnpm run fresh-install
 
@@ -432,7 +432,7 @@ Now you have your following workspace environment setup. To deploy the following
 For an online IDE that you can use on your school computer and/or chromebook use GitPod. Basically the equivalent of Visual Studio Code but with in-browser support.
 
 - Make an account: `https://gitpod.io/`
-- Fork this repo and enter in this URL to setup your workspace: `https://gitpod.io#https://github.com/YourNameHere/InvisiProxy/`
+- Fork this repo and enter in this URL to setup your workspace: `https://gitpod.io#https://github.com/YourNameHere/SuperProxy/`
 
 Use the same steps above by running `pnpm install` in your repository and adding a `.gitignore` in your root directory specifying to exclude `node_modules`.
 
@@ -443,11 +443,11 @@ Use the same steps above by running `pnpm install` in your repository and adding
 
 #### Where can I find the games for this repo? (404 errors, etc.)
 
-Please read over <a href="https://github.com/QuiteAFancyEmerald/InvisiProxy/blob/master/views/GAMES.md">here</a>.
+Please read over <a href="https://github.com/QuiteAFancyEmerald/SuperProxy/blob/master/views/GAMES.md">here</a>.
 
 **Why is the site I am on not working correctly or having CAPTCHA errors?**
 
-Captcha support is spotty on all of the current proxies sadly. It is primarily supported by Scramjet. Therefore some sites may not work with any of the sites.
+Captcha support is spotty on all of the current proxies sadly. It is primarily supported by SuperDuperProxy. Therefore some sites may not work with any of the sites.
 
 **I am getting 502 errors. What do I do?**
 
@@ -469,7 +469,7 @@ The main change of thought is that I’m finally just putting an end right now d
 
 Some things I’ll be keeping secret since there are more reasons to this choice unless otherwise for those who don’t find this enough information. Good friends here will know that I’ve been super stressed about this choice for months now. Also regardless a good motivator for this choice is the fact that I’ll be graduating soon.
 
-It’s possible that I may continue/come back for this in the future or keep it on GitHub only. I leave this here because even now I am still doubting myself about this change. But for now I’d check out other proxy sites like Incognito (Duce DOES a ton of updates frequently and he is the creator/developer of Ultraviolet so give him some love) :yayy_hopi:
+It’s possible that I may continue/come back for this in the future or keep it on GitHub only. I leave this here because even now I am still doubting myself about this change. But for now I’d check out other proxy sites like Incognito (Duce DOES a ton of updates frequently and he is the creator/developer of SuperNiceProxy so give him some love) :yayy_hopi:
 
 Check out his Patreon also! For current HU patrons you will not be billed next month and the HU Patreon will be archived so head over to Duce’s patron so he can purchase more domains for Incognito.
 
@@ -480,7 +480,7 @@ Emerald :HuTaoHype:
 
 ## More Information
 
-This project is maintained by the InvisiProxy LTS team and is an official flagship TitaniumNetwork web proxy site.
+This project is maintained by the SuperProxy LTS team and is an official flagship TitaniumNetwork web proxy site.
 
 - <a href="https://github.com/titaniumnetwork-dev/">https://github.com/titaniumnetwork-dev/</a>
 - <a href="https://titaniumnetwork.org/">https://titaniumnetwork.org/</a>
@@ -489,11 +489,11 @@ View the official website for more detail and credits.
 
 ### Web Proxy Sources:
 
-This project currently uses Scramjet and Ultraviolet as web proxies adhering to the Wisp protocol. Bare-Mux is utilized for swapping transport systems to be utilized with Wisp. The included transport systems are EpoxyTransport and libcurl-transport.
+This project currently uses SuperDuperProxy and SuperNiceProxy as web proxies adhering to the Wisp protocol. Bare-Mux is utilized for swapping transport systems to be utilized with Wisp. The included transport systems are EpoxyTransport and libcurl-transport.
 
 - <a href="https://github.com/sylvieisnton/wispurr">wispurr</a>
-- <a href="https://github.com/MercuryWorkshop/scramjet">Scramjet</a>
-- <a href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet</a>
+- <a href="https://github.com/MercuryWorkshop/scramjet">SuperDuperProxy</a>
+- <a href="https://github.com/titaniumnetwork-dev/Ultraviolet">SuperNiceProxy</a>
 - <a href="https://github.com/MercuryWorkshop/wisp-protocol">Wisp Protocol</a>
 - <a href="https://github.com/MercuryWorkshop/Epoxy-Transport">EpoxyTransport</a>
 - <a href="https://github.com/MercuryWorkshop/Libcurl-Transport">libcurl-transport</a>

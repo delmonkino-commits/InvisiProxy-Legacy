@@ -195,7 +195,7 @@ if (document.getElementById('csel')) {
       // Allow users to reset the title to default if nothing is entered.
       focusElement.focus();
       removeStorage('Title');
-      pageTitle('{{mask}}{{InvisiProxy LTS}}');
+      pageTitle('{{mask}}{{SuperProxy LTS}}');
     }
   });
 
@@ -394,7 +394,7 @@ if (document.getElementById('csel')) {
     }
   });
 
-  /* Allow users to toggle onion routing in Ultraviolet with the UI. Only
+  /* Allow users to toggle onion routing in SuperNiceProxy with the UI. Only
    * the libcurl transport mode supports TOR at the moment, so ensure that
    * users are aware that they cannot use TOR with other modes.
    */

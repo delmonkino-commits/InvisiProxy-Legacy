@@ -1,5 +1,5 @@
 // This file is solely used for the automatically run GitHub job, which checks to
-// see if all InvisiProxy code is working properly (at least on an Ubuntu machine).
+// see if all SuperProxy code is working properly (at least on an Ubuntu machine).
 
 const axios = require('axios');
 const { chromium } = require('playwright');
@@ -195,7 +195,7 @@ xx                                                  xx
 
 */
 
-    const testUltraviolet = async () => {
+    const testSuperNiceProxy = async () => {
       const omniboxId = 'pr-uv',
         errorPrefix = 'failure',
         // For the hacky URL test further below, use the URL page's EXACT title.
@@ -210,7 +210,7 @@ xx                                                  xx
         () =>
           new Promise((resolve) => {
             const ready = () => resolve();
-            if (window.$invisiScramjet?.ready) return ready();
+            if (window.$invisiSuperDuperProxy?.ready) return ready();
             window.addEventListener('s-ready', ready, { once: true });
             setTimeout(ready, 30000);
           })
@@ -319,7 +319,7 @@ xx                                                  xx
       );
 
       console.log(
-        'Ultraviolet test results:',
+        'SuperNiceProxy test results:',
         JSON.stringify(testResults[0], null, 2)
       );
       const uvTestPassed =
@@ -328,13 +328,13 @@ xx                                                  xx
         !testResults[0].ultraviolet.startsWith('failure:') &&
         testResults[1].uvTestPassed;
       console.log(
-        'Ultraviolet test result:',
+        'SuperNiceProxy test result:',
         uvTestPassed ? 'success' : 'failure'
       );
       return uvTestPassed;
     };
 
-    const testScramjet = async () => {
+    const testSuperDuperProxy = async () => {
       const omniboxId = 'pr-sj',
         errorPrefix = 'failure',
         // For the hacky URL test further below, use the URL page's EXACT title.
@@ -347,7 +347,7 @@ xx                                                  xx
         () =>
           new Promise((resolve) => {
             const ready = () => resolve();
-            if (window.$invisiScramjet?.ready) return ready();
+            if (window.$invisiSuperDuperProxy?.ready) return ready();
             window.addEventListener('s-ready', ready, { once: true });
             setTimeout(ready, 30000);
           })
@@ -385,7 +385,7 @@ xx                                                  xx
               }
             }
 
-            const sj = window.$invisiScramjet;
+            const sj = window.$invisiSuperDuperProxy;
             if (!sj?.frame || typeof sj.frame.go !== 'function') {
               results[1].sjTestPassed = false;
               results[0].scramjet =
@@ -438,19 +438,19 @@ xx                                                  xx
         }
       );
 
-      console.log('Scramjet test results:', testResults[0]);
+      console.log('SuperDuperProxy test results:', testResults[0]);
       const sjTestPassed = !!testResults[1].sjTestPassed;
       console.log(
-        'Scramjet test result:',
+        'SuperDuperProxy test result:',
         sjTestPassed ? 'success' : 'failure'
       );
       return sjTestPassed;
     };
 
-    // Run tests for Ultraviolet and Scramjet.
+    // Run tests for SuperNiceProxy and SuperDuperProxy.
     await page.goto('http://localhost:8080/');
-    const ultravioletPassed = await testUltraviolet();
-    const scramjetPassed = await testScramjet();
+    const ultravioletPassed = await testSuperNiceProxy();
+    const scramjetPassed = await testSuperDuperProxy();
 
     if (ultravioletPassed && scramjetPassed) {
       console.log('Tests passed.');

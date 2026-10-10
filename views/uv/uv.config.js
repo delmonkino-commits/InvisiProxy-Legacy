@@ -2,8 +2,8 @@
 
 self['{{__uv$config}}'] = {
   prefix: '{{route}}{{/uv/service/}}',
-  encodeUrl: Ultraviolet.codec.xor.encode,
-  decodeUrl: Ultraviolet.codec.xor.decode,
+  encodeUrl: SuperNiceProxy.codec.xor.encode,
+  decodeUrl: SuperNiceProxy.codec.xor.decode,
   handler: '{{route}}{{/uv/uv.handler.js}}',
   client: '{{route}}{{/uv/uv.client.js}}',
   bundle: '{{route}}{{/uv/uv.bundle.js}}',

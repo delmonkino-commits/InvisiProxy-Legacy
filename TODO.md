@@ -1,14 +1,14 @@
-This will be our nonexhaustive todo list for InvisiProxy LTS v6.x.x and above. Release for production will be v8.x.x and above.
+This will be our nonexhaustive todo list for SuperProxy LTS v6.x.x and above. Release for production will be v8.x.x and above.
 
 ## Priority
 
-- [ ] Make InvisiProxy work on Firefox (requires downloading malware to test :()
+- [ ] Make SuperProxy work on Firefox (requires downloading malware to test :()
 - [ ] Fix abnormal search handling
-- [ ] Class managling and DOM masquerading functionality to Scramjet (or stealth window) 
+- [ ] Class managling and DOM masquerading functionality to SuperDuperProxy (or stealth window) 
 - [ ] Font obfuscation middleware
 - [ ] Implement multi-lang support!
 - [ ] SolidJS rewrite
-- [ ] Update Scramjet to V3
+- [ ] Update SuperDuperProxy to V3
 
 #### Known Regressions
 - Bing will leak out of the respective stealth frame
@@ -19,17 +19,17 @@ This will be our nonexhaustive todo list for InvisiProxy LTS v6.x.x and above. R
 - [ ] Implement sandboxing techniques to prevent new tab leaks
 - [ ] Improve onboarding expierence 
 - [ ] Add bookmarks menu (source wise already present pretty much)
-- [ ] Add Chii + ensuring users can access devtools while browsing; or utilize Scramjet playground instead - partial
+- [ ] Add Chii + ensuring users can access devtools while browsing; or utilize SuperDuperProxy playground instead - partial
 - [ ] Allow for custom SOCK5 proxy layering (HTTP and SOCKS4 scheme as well)
 - [ ] Add selector for default proxy; behavior is upon clicking on logo in omnibox it will direct back to the selected proxy in Settings
 - [x] Swap to wispurr over mrrowisp for security and performance - done
-- [x] Update to Scramjet v2.0.67-alpha.2 fixing several regressions - done
+- [x] Update to SuperDuperProxy v2.0.67-alpha.2 fixing several regressions - done
 - [x] Omnibox should state what the current site the user is on like a proper URL bar 
 - [x] Improve adblocking functions on site using Workerware + a pre-bundled uBlock Origin
 - [x] Implement advanced data URI system
 - [x] Allow custom Wisp urls from the settings menu (not config side)
 - [x] Setting to open multiple stealth frames; basically about:blank but using our system. Pops out in another tab
-- [x] Update to Scramjet v2.0.67-alpha - done
+- [x] Update to SuperDuperProxy v2.0.67-alpha - done
 - [x] Update to use scramjetFrame instead of our own window handling (or whatever 2.0.67-alpha requires) - done
 - [x] Swap to pnpm and node 26 - done
 - [x] Swap to mrrowisp over wisp-js for security and performance - done
@@ -42,21 +42,21 @@ This will be our nonexhaustive todo list for InvisiProxy LTS v6.x.x and above. R
 - [x] Fix keyword/descriptor randomisation - done
 - [x] Adapt Wisp protocol replacing bare which is very unsecure - done
 - [x] Improved error handling for proxy errors - done
-- [x] Ensure Ultraviolet is updated to support bare-mux and wisp - done
-- [x] Ensure Scramjet is added and works together with UV's implementation - done
-- [x] Adapt Scramjet as main proxy for the project - done
+- [x] Ensure SuperNiceProxy is updated to support bare-mux and wisp - done
+- [x] Ensure SuperDuperProxy is added and works together with UV's implementation - done
+- [x] Adapt SuperDuperProxy as main proxy for the project - done
 - [x] Refactor register-sw.js - done
 - [x] Add Rammerhead support - done
-- [x] Fix slow Ultraviolet speeds despite being local; something on the backend?? - done
-- [x] Fix Ultraviolet on Firefox - (partial/needs work)
-- [x] Adapt Applications page to use Scramjet (for Reddit, YouTube, Discord) - done
+- [x] Fix slow SuperNiceProxy speeds despite being local; something on the backend?? - done
+- [x] Fix SuperNiceProxy on Firefox - (partial/needs work)
+- [x] Adapt Applications page to use SuperDuperProxy (for Reddit, YouTube, Discord) - done
 - [x] Added libcurl transport and epoxy transport to meet standards of SJ + Wisp - done
 - [x] SOCKS5/Tor routing option that can be configured as a settings menu option - done
 - [x] SOCKS5 regional proxy implementation - done
 - [x] Update Applications page to reflect modern fast links (use examples from the modern web proxy base) - done. can be expanded later
 - [x] Update settings menu again to make more room for more features - done
 - [x] Update csel.js (after Setting menu redesign) to support custom transports, icon swap, routing - done
-- [x] Flesh out and rework the UV / Scramjet / bare client error page - done
+- [x] Flesh out and rework the UV / SuperDuperProxy / bare client error page - done
 - [x] Update sw.js to support workerware (https://github.com/MercuryWorkshop/workerware)-- This is not done however we have our own middleware system implemented for adblocking, etc.
 - [x] Omnibox autoupdate script (for the Google/Bing style auto suggest feature) - done
 - [x] Omnibar functionality (back and forward navigation, settings menu and create new stealth page with URL) - done
@@ -128,16 +128,16 @@ This will be our nonexhaustive todo list for InvisiProxy LTS v6.x.x and above. R
 - Updated randomization scripts to ES6 syntax and implemented the alternative to RegEx string replacement
 - Helmet for express implemented into backend
 - Improved component handling via templates.mjs along with deletion of obsolete files that previously handled this standard in a poor format
-- Fixed oddly slow speeds with Ultraviolet (as well as a general version bump to support epoxy-tls and bare-mux)
+- Fixed oddly slow speeds with SuperNiceProxy (as well as a general version bump to support epoxy-tls and bare-mux)
 - Implemented testing scripts for an improved GitHub actions workflow by doing a quick test on proxy + site functionality
 - Greatly optimized client-side scripts across the site with a new standard, and generally reworked to no longer leave global variables
 - Changes to server.mjs with path logic and error handling
 - Updated standards for common scripts
 - libcurl and bare-as-module support added
 - Deleted 5 JS scripts and moved lots of data into JSON files. Big reorganization. Games menu core scripts now nested inside of common.js utilizing a JSON system
-- Massive updates to the Settings menu visually and functionality wise; added Bare-Mux support for swapping transports to work with Ultraviolet, default icons and selective adblocking + Tor on any proxy instances
+- Massive updates to the Settings menu visually and functionality wise; added Bare-Mux support for swapping transports to work with SuperNiceProxy, default icons and selective adblocking + Tor on any proxy instances
 - CSS Has been partially restructured for mobile support, and is now properly arranged into clearly labeled sections (for the most part)
-- Incorporated makeshift domain blacklisting functionality into Ultraviolet, currently used for blocking ads if ads are disabled in settings
+- Incorporated makeshift domain blacklisting functionality into SuperNiceProxy, currently used for blocking ads if ads are disabled in settings
 - Fleshed out the SEO with more descriptions and better labeling
 - Switched to Fastify for serving content from the backend; a separate Express backend file is kept in case it's still needed
 - Rammerhead is now locally built into the InvisiLTS repository

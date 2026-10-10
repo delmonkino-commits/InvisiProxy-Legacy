@@ -1,6 +1,6 @@
 {
-  "short_name": "InvisiProxy LTS",
-  "name": "InvisiProxy LTS | Free Web Proxy Service",
+  "short_name": "SuperProxy LTS",
+  "name": "SuperProxy LTS | Free Web Proxy Service",
   "icons": [
     {
       "src": "https://invisiproxy.com/assets/img/icon.png",
@@ -48,7 +48,7 @@
   "display": "standalone",
   "theme_color": "#b4213b",
   "background_color": "#1f003e",
-  "description": "InvisiProxy LTS is a free and secure web proxy service that helps you bypass web filters and access blocked websites. Enjoy anonymous browsing and internet freedom on devices like Chromebooks at school or work.",
+  "description": "SuperProxy LTS is a free and secure web proxy service that helps you bypass web filters and access blocked websites. Enjoy anonymous browsing and internet freedom on devices like Chromebooks at school or work.",
   "short_description": "Free web proxy service for bypassing filters and accessing blocked sites.",
   "keywords": [
     "proxy",
@@ -60,7 +60,7 @@
     "proxy server",
     "proxy YouTube",
     "bypass web filters",
-    "InvisiProxy",
+    "SuperProxy",
     "unblock Chromebook",
     "fast proxy",
     "secure proxy",
@@ -74,7 +74,7 @@
     },
     {
       "platform": "github",
-      "url": "https://github.com/QuiteAFancyEmerald/InvisiProxy"
+      "url": "https://github.com/QuiteAFancyEmerald/SuperProxy"
     },
     {
       "platform": "twitter",

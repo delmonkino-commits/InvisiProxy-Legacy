@@ -1,12 +1,12 @@
-<h1>{{mask}}{{InvisiProxy LTS (Legacy v7.x.x)}}</h1>
+<h1>{{mask}}{{SuperProxy LTS (Legacy v7.x.x)}}</h1>
 {{ifSEO}}{{
 <p>
   <img
-    src="https://github.com/QuiteAFancyEmerald/InvisiProxy/workflows/CI-Production/badge.svg"
+    src="https://github.com/QuiteAFancyEmerald/SuperProxy/workflows/CI-Production/badge.svg"
     alt="GitHub Actions Status"
   />
   <img
-    src="https://github.com/QuiteAFancyEmerald/InvisiProxy/workflows/CI-Win/badge.svg"
+    src="https://github.com/QuiteAFancyEmerald/SuperProxy/workflows/CI-Win/badge.svg"
     alt="GitHub Actions Status"
   />
 </p>
@@ -32,9 +32,9 @@
   <a href="{{route}}{{/codespaces}}">Codespaces</a> website (ensure you have a
   GitHub account already made)<br />
   - Select <strong>New Codespaces</strong> and look for
-  <em>{{mask}}{{[USERNAME]/InvisiProxy}}</em> on your account<br />
+  <em>{{mask}}{{[USERNAME]/SuperProxy}}</em> on your account<br />
   - Ensure the branch is set to <code>master</code> and the dev container
-  configuration is set to <strong>{{mask}}{{InvisiProxy LTS}}</strong><br />
+  configuration is set to <strong>{{mask}}{{SuperProxy LTS}}</strong><br />
   - Select <strong>Create Codespace</strong> and allow the container to setup<br />
   - Type <code>pnpm run fresh-install</code> and <code>pnpm start</code> in the
   terminal<br />
@@ -60,8 +60,8 @@
   </div>
   <div class="mac-content">
     <p>
-      <span class="cmd">git clone {{mask}}{{https://github.com/QuiteAFancyEmerald/InvisiProxy.git}}&#13;</span><br />
-      <span class="cmd">cd {{mask}}{{InvisiProxy}}&#13;</span><br />
+      <span class="cmd">git clone {{mask}}{{https://github.com/QuiteAFancyEmerald/SuperProxy.git}}&#13;</span><br />
+      <span class="cmd">cd {{mask}}{{SuperProxy}}&#13;</span><br />
       <span class="comment"># Edit config.js and set production to true if you want to use pm2 (Allows for easier VPS hosting)</span><br />
       <span class="cmd">pnpm run fresh-install&#13;</span><br />
       <span class="cmd">pnpm run fetch-adblock&#13;</span><br />
@@ -75,7 +75,7 @@
       <span class="comment"># If you encounter any service errors...</span><br />
       <span class="cmd">pnpm run test&#13;</span><br /><br />
       <span class="comment"
-        >{{mask}}{{InvisiProxy LTS}} v{{version}} // master</span
+        >{{mask}}{{SuperProxy LTS}} v{{version}} // master</span
       ><br />
       <span class="comment">Node.js v26.x</span><br />
       <span class="comment">Fastify v5.8.5</span><br /><br />
@@ -107,10 +107,10 @@
   >
 </p>
 <p><br>
-  {{mask}}{{If you are hosting InvisiProxy LTS on a VPS utilizing Ubuntu
+  {{mask}}{{If you are hosting SuperProxy LTS on a VPS utilizing Ubuntu
   consider attaching Tor to systemctl for easier production management. Once Tor
   is up and running on either Linux or Windows it will work automatically with
-  InvisiProxy LTS when enabled by the user via the Settings menu.}}
+  SuperProxy LTS when enabled by the user via the Settings menu.}}
 </p>
 <br />
 <h4>{{mask}}{{Proxy Configuration}}</h4>
@@ -125,12 +125,12 @@
 <ul>
   <li>
     <code>{{mask}}{{stockSW}}</code>: {{mask}}{{The default service worker
-    configuration file for Ultraviolet. For InvisiProxy however adblocking is
+    configuration file for SuperNiceProxy. For SuperProxy however adblocking is
     automatically enabled so this is not used by default.}}
   </li>
   <li>
     <code>{{mask}}{{blacklistSW}}</code>: {{mask}}{{A modified version of
-    Ultraviolet that allows for blacklisting domains and adblocking.}}
+    SuperNiceProxy that allows for blacklisting domains and adblocking.}}
   </li>
   <li>
     <code>{{mask}}{{proxyUrl}}</code>:{{mask}}{{ Specifies a SOCKS5 protocol URL
@@ -151,8 +151,8 @@
     menu)}}
   </li>
   <li>
-    <code>{{mask}}{{ScramjetController}}</code>:{{mask}}{{ This constructor
-    allows you to swap out the prefix used for Scramjet dynamically and specify
+    <code>{{mask}}{{SuperDuperProxyController}}</code>:{{mask}}{{ This constructor
+    allows you to swap out the prefix used for SuperDuperProxy dynamically and specify
     file locations. Note you may need to edit
     }}<code>{{mask}}{{./views/scram/scramjet.sw}}</code>{{mask}}{{ when changing
     file names.}}
