@@ -1,0 +1,252 @@
+import re, os
+
+STORM = r'''<script>
+(function () {
+  try {
+  if (window.__stormOn) return;
+  window.__stormOn = 1;
+  var c = document.createElement('canvas');
+  c.id = 'stormcanvas2';
+  c.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none';
+  var st = document.createElement('style');
+  st.id = 'stormstyle';
+  st.textContent = 'html { background: #070b14 !important; } body { background: transparent !important; } .tsparticles-canvas-el { display: none !important; }';
+  function ensure() {
+    var root = document.documentElement;
+    if (!root) return;
+    if (!c.isConnected) root.appendChild(c);
+    if (!st.isConnected) root.appendChild(st);
+  }
+  ensure();
+  var x = c.getContext('2d');
+  var D = Math.min(window.devicePixelRatio || 1, 1.5);
+  var W = 0, H = 0, drops = [], blobs = [], bolt = null, flash = 0, nextBolt = 0, last = 0;
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function size() {
+    W = window.innerWidth; H = window.innerHeight;
+    c.width = W * D; c.height = H * D;
+    x.setTransform(D, 0, 0, D, 0, 0);
+    drops = [];
+    var n = Math.min(260, Math.floor(W * H / 6500));
+    for (var i = 0; i < n; i++) drops.push(newDrop(true));
+    blobs = [];
+    for (var j = 0; j < 8; j++) {
+      blobs.push({ x: Math.random() * W, y: Math.random() * H * 0.45, r: W * (0.22 + Math.random() * 0.2), s: 4 + Math.random() * 10 });
+    }
+  }
+
+  function newDrop(anywhere) {
+    return { x: Math.random() * (W + 200) - 100, y: anywhere ? Math.random() * H : -20, l: 10 + Math.random() * 16, v: 600 + Math.random() * 500 };
+  }
+
+  function branch(px, py, dir, len) {
+    var pts = [{ x: px, y: py }];
+    for (var i = 0; i < len; i++) {
+      px += dir * (6 + Math.random() * 18) + (Math.random() - 0.5) * 14;
+      py += 12 + Math.random() * 22;
+      pts.push({ x: px, y: py });
+    }
+    return pts;
+  }
+
+  function makeBolt() {
+    var px = W * (0.12 + Math.random() * 0.76);
+    var endY = H * (0.45 + Math.random() * 0.4);
+    var segs = 16;
+    var main = [{ x: px, y: 0 }];
+    var subs = [];
+    for (var i = 1; i <= segs; i++) {
+      px += (Math.random() - 0.5) * 70;
+      var py = endY * i / segs;
+      main.push({ x: px, y: py });
+      if (i > 2 && i < segs - 2 && Math.random() < 0.3) {
+        subs.push(branch(px, py, Math.random() < 0.5 ? -1 : 1, 3 + Math.floor(Math.random() * 4)));
+      }
+    }
+    return { main: main, subs: subs, life: 1 };
+  }
+
+  function strike(now) {
+    bolt = makeBolt();
+    flash = 1;
+    setTimeout(function () { flash = 0.85; }, 110);
+    setTimeout(function () { flash = Math.max(flash, 0.95); bolt.life = 1; }, 190);
+    nextBolt = now + 3000 + Math.random() * 6500;
+  }
+
+  function line(pts) {
+    x.beginPath();
+    x.moveTo(pts[0].x, pts[0].y);
+    for (var i = 1; i < pts.length; i++) x.lineTo(pts[i].x, pts[i].y);
+    x.stroke();
+  }
+
+  function frame(now) {
+    var dt = Math.min((now - last) / 1000, 0.05);
+    last = now;
+    if (!nextBolt) nextBolt = now + 1500;
+    if (now > nextBolt && !still) strike(now);
+
+    var g = x.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, 'rgb(' + Math.round(8 + flash * 55) + ',' + Math.round(12 + flash * 65) + ',' + Math.round(22 + flash * 85) + ')');
+    g.addColorStop(1, 'rgb(7,11,20)');
+    x.fillStyle = g;
+    x.fillRect(0, 0, W, H);
+
+    for (var b = 0; b < blobs.length; b++) {
+      var o = blobs[b];
+      o.x += o.s * dt;
+      if (o.x - o.r > W) o.x = -o.r;
+      var rg = x.createRadialGradient(o.x, o.y, 0, o.x, o.y, o.r);
+      rg.addColorStop(0, 'rgba(' + Math.round(34 + flash * 150) + ',' + Math.round(44 + flash * 150) + ',' + Math.round(66 + flash * 150) + ',0.55)');
+      rg.addColorStop(1, 'rgba(20,28,45,0)');
+      x.fillStyle = rg;
+      x.fillRect(o.x - o.r, o.y - o.r, o.r * 2, o.r * 2);
+    }
+
+    x.strokeStyle = 'rgba(165,190,225,0.32)';
+    x.lineWidth = 1;
+    x.beginPath();
+    for (var d = 0; d < drops.length; d++) {
+      var p = drops[d];
+      p.y += p.v * dt;
+      p.x -= p.v * dt * 0.22;
+      if (p.y > H) { drops[d] = newDrop(false); continue; }
+      x.moveTo(p.x, p.y);
+      x.lineTo(p.x + p.l * 0.22, p.y - p.l);
+    }
+    x.stroke();
+
+    if (bolt && flash > 0.12) {
+      x.lineJoin = 'round';
+      x.shadowColor = 'rgba(150,190,255,1)';
+      x.shadowBlur = 28;
+      x.strokeStyle = 'rgba(190,215,255,' + Math.min(1, flash + 0.1) + ')';
+      x.lineWidth = 4;
+      line(bolt.main);
+      x.strokeStyle = 'rgba(255,255,255,' + Math.min(1, flash + 0.2) + ')';
+      x.lineWidth = 1.6;
+      line(bolt.main);
+      x.lineWidth = 1.2;
+      for (var s = 0; s < bolt.subs.length; s++) line(bolt.subs[s]);
+      x.shadowBlur = 0;
+    }
+    flash *= Math.pow(0.04, dt);
+    if (flash < 0.02) { flash = 0; bolt = null; }
+    if (!still && !document.hidden) requestAnimationFrame(frame);
+    else if (!still) setTimeout(function () { requestAnimationFrame(frame); }, 500);
+  }
+
+  function hideOld() {
+    var all = document.querySelectorAll('canvas');
+    for (var i = 0; i < all.length; i++) {
+      var k = all[i];
+      if (k === c) continue;
+      if (k.offsetWidth > window.innerWidth * 0.8 && k.offsetHeight > window.innerHeight * 0.8) k.style.display = 'none';
+    }
+  }
+
+  var busy = false;
+  new MutationObserver(function () {
+    if (!c.isConnected || !st.isConnected) ensure();
+    if (busy) return;
+    busy = true;
+    setTimeout(function () { busy = false; try { hideOld(); fixCovers(); } catch (e) { } }, 300);
+  }).observe(document, { childList: true, subtree: true });
+
+
+  var badge = null, fixes = 0;
+
+  function alphaOf(col) {
+    var m = String(col).match(/rgba?\(([^)]+)\)/);
+    if (!m) return 0;
+    var p = m[1].split(',');
+    return p.length > 3 ? parseFloat(p[3]) : 1;
+  }
+  function fixCovers() {
+    var pts = [[0.08, 0.6], [0.92, 0.6], [0.5, 0.96], [0.2, 0.3]];
+    for (var i = 0; i < pts.length; i++) {
+      var list = document.elementsFromPoint(W * pts[i][0], H * pts[i][1]);
+      for (var j = 0; j < list.length; j++) {
+        var e = list[j];
+        if (e === c || e === badge || e === document.documentElement || e === document.body) continue;
+        var r = e.getBoundingClientRect();
+        if (r.width < W * 0.9 || r.height < H * 0.5) continue;
+        var cs = getComputedStyle(e);
+        if (alphaOf(cs.backgroundColor) > 0.3) { e.style.setProperty('background', 'transparent', 'important'); fixes++; }
+        var nm = (String(e.id) + ' ' + String(e.className)).toLowerCase();
+        if (nm.indexOf('particle') > -1 && cs.position !== 'static') { e.style.setProperty('display', 'none', 'important'); fixes++; }
+      }
+    }
+  }
+  function probe() {
+    var out = [];
+    var list = document.elementsFromPoint(W * 0.08, H * 0.6);
+    for (var i = 0; i < list.length && out.length < 6; i++) {
+      var e = list[i];
+      var cs = getComputedStyle(e);
+      out.push(e.tagName.toLowerCase() + (e.id ? '#' + e.id : '') + '.' + String(e.className).slice(0, 18) + ' bg=' + alphaOf(cs.backgroundColor) + ' z=' + cs.zIndex + ' ' + cs.position);
+    }
+    return out.join('\n');
+  }
+  function say(msg, bad) {
+    try {
+      if (!badge) {
+        badge = document.createElement('div');
+        badge.style.cssText = 'white-space:pre;position:fixed;left:8px;bottom:8px;z-index:2147483647;padding:6px 10px;font:12px/1.3 monospace;border-radius:6px;color:#fff;max-width:80vw;pointer-events:none';
+      }
+      badge.style.background = bad ? '#b00020' : '#1b7f3b';
+      badge.textContent = msg;
+      if (!badge.isConnected && document.documentElement) document.documentElement.appendChild(badge);
+    } catch (e) { }
+  }
+  window.addEventListener('error', function (e) { say('STORM ERROR: ' + e.message, true); });
+  setTimeout(function () {
+    say('storm ok | canvas in page: ' + c.isConnected + ' | size ' + W + 'x' + H + ' | fixes: ' + fixes + '\n' + probe(), !c.isConnected);
+  }, 4500);
+  setTimeout(function () { if (badge) badge.remove(); }, 30000);
+
+  size();
+  window.addEventListener('resize', size);
+  requestAnimationFrame(function (t) { last = t; frame(t); });
+  function sweep() { try { hideOld(); fixCovers(); } catch (e) { } }
+  setTimeout(sweep, 400);
+  setTimeout(sweep, 1500);
+  setTimeout(sweep, 4000);
+  setInterval(sweep, 3000);
+  } catch (err) {
+    var d = document.createElement('div');
+    d.style.cssText = 'position:fixed;left:8px;bottom:8px;z-index:2147483647;padding:6px 10px;font:12px monospace;background:#b00020;color:#fff;border-radius:6px';
+    d.textContent = 'STORM CRASH: ' + err.message;
+    (document.documentElement || document).appendChild(d);
+  }
+})();
+</script>
+'''
+
+FILES = """views/index.html views/faq.html views/docs.html views/pages/surf.html
+views/pages/proxnav/preset/applications.html views/pages/proxnav/preset/youtube.html
+views/pages/proxnav/ultraviolet.html views/pages/proxnav/scramjet.html
+views/pages/nav/partners.html views/pages/nav/privacy.html views/pages/nav/icons.html
+views/pages/nav/credits.html views/pages/misc/template.html""".split()
+
+OLD = re.compile(r"<script>\n\(function \(\) \{\n  (?:try \{\n  )?if \(window\.__stormOn\).*?</script>\n?", re.S)
+
+ok = 0
+for p in FILES:
+    if not os.path.exists(p):
+        print("missing:", p); continue
+    s = open(p, encoding="utf-8").read()
+    s = OLD.sub("", s)
+    if p.endswith("views/index.html"):
+        s, n = re.subn(r"(<body[^>]*>)", lambda m: m.group(1) + "\n" + STORM, s, count=1, flags=re.I)
+    else:
+        s, n = re.subn(r"</body>", lambda m: STORM + "</body>", s, count=1, flags=re.I)
+    if n:
+        open(p, "w", encoding="utf-8").write(s)
+        ok += 1
+        print("updated", p)
+    else:
+        print("NO BODY TAG, skipped:", p)
+print("done. updated", ok, "of", len(FILES))
